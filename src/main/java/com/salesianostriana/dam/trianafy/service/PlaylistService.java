@@ -21,25 +21,15 @@ public class PlaylistService {
 
     private final PlaylistRepository repository;
 
-    @PostMapping("/list")
-    public Playlist add(Playlist playlist) {
 
-        return repository.save(playlist);
+    public Playlist add(Playlist playlist) { return repository.save(playlist); }
 
-
-    }
-
-    @GetMapping("/list/{id}")
-    public Optional<Playlist> findById(@PathVariable Long id) {
+    public Optional<Playlist> findById(Long id) {
         return repository.findById(id);
     }
 
-    @GetMapping("/list")
-    public List<Playlist> findAll() {
-        return repository.findAll();
-    }
+    public List<Playlist> findAll() { return repository.findAll(); }
 
-    @PutMapping("/list{")
     public Playlist edit(Playlist playlist) {
         return repository.save(playlist);
     }

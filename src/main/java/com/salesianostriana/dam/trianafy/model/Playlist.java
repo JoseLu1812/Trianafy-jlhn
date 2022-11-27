@@ -21,7 +21,6 @@ public class Playlist {
     private Long id;
 
     private String name;
-
     private String description;
 
     @ManyToMany(fetch = FetchType.EAGER)
